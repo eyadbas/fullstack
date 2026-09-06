@@ -1,0 +1,1 @@
+.arabic-name{display:none;color:var(--red);font:600 18px/1 'Manrope',sans-serif;white-space:nowrap}html[dir="rtl"] .arabic-name{display:inline}@media(max-width:700px){.arabic-name{font-size:15px}}

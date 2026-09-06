@@ -1,0 +1,47 @@
+/* Type and photography refinements for the QS consultancy site. */
+body{font-family:'Manrope',sans-serif}
+.eyebrow{font-size:12px}
+.nav-links a,.region-link,.region-label,.text-link,.search-panel label{font-size:12px}
+.contact-button,.about-section .cv-button{font-size:13px}
+.hero-deck{font-size:17px;line-height:1.62}
+.section-intro{font-size:15px;line-height:1.65}
+.service-card p{font-size:14px;line-height:1.55}
+.about-grid p:not(.eyebrow){font-size:20px;line-height:1.6}
+.about-grid .bio{font-size:16px!important}
+.contact-grid>div:last-child>p{font-size:15px;line-height:1.65}
+.stats-grid span,.about-stats span{font-size:11px}
+.footer-links,.footer-bottom{font-size:11px}
+.hero h1,.intro-grid h2,.section-heading h2,.service-card h3,.spotlight-copy h2,.about-grid h2,.careers-grid h2{font-family:'DM Serif Display',serif;font-weight:400}
+.ey-tagline,.region-label,.nav-links a,.region-link,.search-panel label,.eyebrow,.text-link,.service-number,.footer-links,.footer-bottom{font-family:'IBM Plex Mono',monospace}
+.region-label{background:none;border:0;cursor:pointer;padding:0;text-transform:uppercase}
+.about-grid{grid-template-columns:40% 60%;align-items:center;gap:7%}
+.about-photo{height:365px;position:relative;overflow:hidden}
+.about-photo img{width:100%;height:100%;object-fit:cover;filter:grayscale(.15)}
+.about-photo span{position:absolute;bottom:0;left:0;background:#fff;color:var(--ink);padding:10px 13px;font:10px 'IBM Plex Mono',monospace;text-transform:uppercase}
+.about-photo b{color:var(--red);margin-left:6px}
+.about-copy{max-width:650px}
+.about-section .cv-button{display:inline-block;background:#fff;color:var(--red);padding:15px 20px;margin-top:24px;font-size:12px;font-weight:700}
+.about-section .cv-button span{color:var(--red)}
+.language-options{display:none;align-items:center;justify-content:flex-end;gap:18px;border-top:1px solid var(--line);padding-top:12px;padding-bottom:14px;font:10px 'IBM Plex Mono',monospace;text-transform:uppercase}
+.language-options.open{display:flex}
+.language-options>span{color:var(--muted);margin-right:auto}
+.language-options a{border-bottom:1px solid transparent;padding-bottom:4px}
+.language-options a.active{border-bottom-color:var(--red);color:var(--red)}
+html[dir="rtl"] body{text-align:right}
+html[dir="rtl"] .utility-actions,html[dir="rtl"] .main-nav,html[dir="rtl"] .hero-actions,html[dir="rtl"] .footer-top,html[dir="rtl"] .footer-bottom{direction:rtl}
+html[dir="rtl"] .ey-logo,html[dir="rtl"] .utility-actions,html[dir="rtl"] .hero-actions{flex-direction:row}
+html[dir="rtl"] .ey-tagline{border-left:0;border-right:1px solid var(--line);padding-left:0;padding-right:13px}
+html[dir="rtl"] .hero-copy,html[dir="rtl"] .about-copy,html[dir="rtl"] .contact-grid>div:last-child{padding-right:0;padding-left:35px}
+html[dir="rtl"] .section-heading,html[dir="rtl"] .contact-grid,html[dir="rtl"] .about-grid{direction:rtl}
+html[dir="rtl"] .stats-grid>div,html[dir="rtl"] .about-stats>div{border-right:0;border-left:1px solid rgba(255,255,255,.4);padding-left:25px;padding-right:0}
+html[dir="rtl"] .stats-grid>div:last-child,html[dir="rtl"] .about-stats>div:last-child{border-left:0}
+html[dir="rtl"] .service-card{border-right:0;border-left:1px solid var(--line);padding-left:25px;padding-right:0;margin-left:25px;margin-right:0}
+html[dir="rtl"] .service-card:last-child{border-left:0;margin-left:0}
+html[dir="rtl"] .about-photo span{left:auto;right:0}
+html[dir="rtl"] .founder-tag{border-left:0;border-right:3px solid #fff;padding-left:0;padding-right:13px}
+html[dir="rtl"] .language-options{justify-content:flex-start}
+html[dir="rtl"] .language-options>span{margin-left:auto;margin-right:0}
+html[dir="rtl"] .eyebrow{flex-direction:row}
+html[dir="rtl"] .search-field{direction:rtl}
+@media(max-width:760px){html[dir="rtl"] .hero-copy,html[dir="rtl"] .contact-grid>div:last-child{padding-left:0}.service-card{margin-left:0}}
+@media(max-width:760px){.menu-toggle{font-size:11px}.region-label{font-size:10px}.nav-links a,.region-link{font-size:11px}.eyebrow{font-size:11px}.hero-deck{font-size:16px}.section-intro,.service-card p,.contact-grid>div:last-child>p{font-size:14px}.about-grid p:not(.eyebrow){font-size:18px}.language-options{font-size:11px}.about-grid{display:block}.about-photo{height:245px;margin-bottom:34px}.about-copy{max-width:none}}

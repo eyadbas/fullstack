@@ -1,0 +1,6 @@
+.stats-grid span,.about-stats span{font-size:16px;font-weight:700;line-height:1.35}
+.section-intro,.service-card p,.contact-grid>div:last-child>p{font-size:16px;font-weight:700;line-height:1.6}
+.service-number{font-size:16px;font-weight:700}
+.about-tags{font-size:16px;font-weight:700}
+.footer-links,.footer-bottom{font-size:13px;font-weight:700}
+@media(max-width:760px){.stats-grid span,.about-stats span,.section-intro,.service-card p,.contact-grid>div:last-child>p,.service-number,.about-tags{font-size:16px}.footer-links,.footer-bottom{font-size:12px}}
