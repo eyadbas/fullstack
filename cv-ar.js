@@ -1,6 +1,12 @@
 const cvLanguageToggle = document.querySelector('[data-cv-language]');
 const visibleCertifications = '.cv-section[id="certifications"]:not(:has(+ .cv-section[id="certifications"]))';
 
+const downloadCvButton = document.createElement('a');
+downloadCvButton.className = 'cv-download-button';
+downloadCvButton.href = 'Cert/CV.pdf';
+downloadCvButton.innerHTML = 'Download CV <span>↗</span>';
+document.querySelector('.badges').insertAdjacentElement('afterend', downloadCvButton);
+
 const cvTranslations = {
   '.brand-copy': 'حلول الجودة<br>استشارات GRC وPMO التقني',
   '.cv-nav > a': ['من نحن', 'الخبرة', 'الشهادات', 'تواصل', 'العودة إلى QS ↗'],
