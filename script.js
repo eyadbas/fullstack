@@ -3,54 +3,62 @@ const navLinks = document.querySelector('[data-nav-links]');
 const searchToggle = document.querySelector('[data-search-toggle]');
 const searchPanel = document.querySelector('[data-search-panel]');
 const languageOptions = document.querySelector('[data-language-options]');
-const languageLinks = document.querySelectorAll('[data-language]');
 const languageToggle = document.querySelector('[data-language-toggle]');
+const languageLinks = document.querySelectorAll('[data-language]');
 
 const translations = {
-  ar: {
-    '.ey-tagline': 'حوكمة وتقنية<br>استشارات PMO',
-    '.region-label': 'اختيار اللغة <span class="chevron">⌄</span>',
-    '.contact-button': 'تحدث مع مستشار',
-    '.menu-toggle em': 'اختيار اللغة',
-    '.nav-links a': ['الخدمات', 'من نحن', 'تواصل معنا'],
-    '.region-link': 'المملكة العربية السعودية <span>↗</span>',
-    '.language-options > span': 'اختر اللغة',
-    '.search-panel label': 'ابحث في حلول الجودة',
-    '#site-search': { placeholder: 'ابحث عن الخدمات والاستشارات' },
-    '.search-field button': 'بحث',
-    '.hero-copy .eyebrow': 'الحوكمة / المخاطر / التنفيذ',
-    '.hero h1': 'حوكمة تواكب<br>سرعة <i>التنفيذ.</i>',
-    '.hero-deck': 'حلول الجودة الشاملة هي جهة استشارية مستقلة في الحوكمة والمخاطر وإدارة المشاريع التقنية. نساعد مؤسسات القطاعين العام والخاص على بناء أطر الحوكمة وإدارة مخاطر المؤسسة وتنفيذ البرامج التقنية بما يصمد أمام التدقيق واللوائح وضغوط التنفيذ.',
-    '.hero-actions .yellow-button': 'تحدث مع مستشار <span>↗</span>',
-    '.hero-actions .text-link': 'استكشف خدماتنا الاستشارية <span>↗</span>',
-    '.stats-grid span': ['سنوات في الحوكمة والمخاطر وPMO التقني', 'قطاعات صناعية نخدمها', 'إطار حوكمة متكامل'],
-    '.services-section .eyebrow': 'الخدمات الاستشارية',
-    '.services-section h2': 'حوكمة مبنية<br>لتحقيق <i>الضمان.</i>',
-    '.section-intro': 'استشارات متكاملة في الحوكمة والمخاطر والامتثال وإدارة المشاريع التقنية، بدءًا من تصميم الضوابط وإدارة مخاطر المؤسسة وصولًا إلى حوكمة البرامج والاستعداد للتدقيق.',
-    '.service-card h3': ['الحوكمة والمخاطر والامتثال (GRC)', 'إدارة مشاريع تقنية المعلومات', 'تأسيس وحوكمة مكاتب إدارة المشاريع', 'تقييم المخاطر والتخفيف منها', 'تدقيق الامتثال', 'استشارات إدارة البرامج'],
-    '.service-card p': ['تصميم أطر متكاملة للحوكمة والمخاطر والامتثال متوافقة مع ISO 31000 وCOBIT، وتحويل المساءلة والامتثال إلى ممارسة يومية.', 'قيادة البرامج التقنية من الميثاق حتى الإطلاق باستخدام منهجية متوافقة مع PMI/PMBOK وسجلات RAID وحوكمة منضبطة لمراحل التنفيذ.', 'تأسيس مكاتب إدارة مشاريع مناسبة للحجم، تشمل المواثيق ومصفوفات RACI ودورات التقارير، لمنح القيادة رؤية فورية لصحة المحفظة.', 'تحديد مخاطر المؤسسة وترتيب أولوياتها عبر تقييمات منظمة وسجلات مخاطر ومراقبة قائمة على مؤشرات المخاطر الرئيسية.', 'بناء بيئات ضوابط جاهزة للتدقيق من خلال اختبار قائم على الأدلة وتقييم الفجوات وخرائط طريق المعالجة.', 'توفير إشراف قيادي للمحافظ متعددة المسارات وحل الاعتماديات وحماية الجداول الزمنية للتنفيذ.'],
-    '.about-copy .eyebrow': 'لماذا حلول الجودة',
-    '.about-copy h2': 'خبرة يمكنك<br>وضعها <i>موضع التنفيذ.</i>',
-    '.about-copy > p:nth-of-type(2)': 'حلول الجودة الشاملة جهة استشارية مستقلة للقادة الذين يحتاجون إلى التقدم دون فقدان السيطرة، حيث نربط الحوكمة الاستراتيجية بالتفاصيل التشغيلية التي تجعل التنفيذ واقعًا.',
-    '.founder-tag': 'المؤسس / المستشار الرئيسي — إياد باصبرين',
-    '.bio': 'بخبرة تزيد عن 13 عامًا في القطاعين الحكومي والتقني، يجمع إياد باصبرين (PMP، PMI-ACP، GRCP، GRCA، CISSP) بين قيادة مكاتب إدارة المشاريع التقنية والاستشارات في الحوكمة والمخاطر لمواجهة تحديات التحول والتنفيذ المعقدة.',
-    '.about-tags': 'قطاعات حكومية وتقنية · قيادة PMO تقني · استشارات GRC وإدارة مخاطر المؤسسة',
-    '.cv-button': 'عرض السيرة الذاتية لإياد <span>↗</span>',
-    '.about-stats span': ['سنوات من الخبرة', 'بيئات تشغيلية', 'مساحة للتحسين'],
-    '.contact-grid .eyebrow': 'لنتحدث',
-    '.contact-grid h2': 'خطوتك القادمة<br><i>الواضحة.</i>',
-    '.contact-grid > div:last-child > p': 'أخبرنا بما تعمل عليه، وسنقدم لك وجهة نظر مدروسة وخطوة عملية تالية.',
-    '.contact-link': 'لينكدإن / إياد باصبرين <span>↗</span>',
-    '.footer-links a': ['من نحن', 'الخدمات', 'تواصل معنا'],
-    '.footer-bottom span': ['© 2026 حلول الجودة. جميع الحقوق محفوظة.', 'الحوكمة / PMO / تنفيذ تقنية المعلومات']
-  }
+  '.ey-tagline': 'إدارة شبكات البيانات والاتصالات<br>مدير مشاريع',
+  '.region-label': 'اللغات <span class="chevron">⌄</span>',
+  '.contact-button': 'تواصل معي',
+  '.menu-toggle em': 'القائمة',
+  '.nav-links a': ['نبذة', 'الخبرة', 'الشهادات', 'تواصل'],
+  '.region-link': 'الرياض، المملكة العربية السعودية <span>↗</span>',
+  '.language-options > span': 'اختر اللغة',
+  '.search-panel label': 'البحث في السيرة الذاتية',
+  '#site-search': { placeholder: 'ابحث في الخبرة والمهارات والمشاريع' },
+  '.search-field button': 'بحث',
+  '.hero .eyebrow': 'مدير مشاريع شبكات البيانات والاتصالات',
+  '.hero h1': 'شبكات تحافظ على استمرار <i>العمليات الحيوية.</i>',
+  '.hero-deck': 'مدير مشاريع تقنية معلومات بخبرة مثبتة في تنفيذ مشاريع البنية التحتية للشبكات والاتصالات الهاتفية عبر بروتوكول الإنترنت في قطاع المطارات.',
+  '.hero-actions .blue-button': 'لنتواصل <span>↗</span>',
+  '.hero-actions .text-link': 'تحميل السيرة الذاتية <span>↗</span>',
+  '.hero-panel-caption span': 'المقر',
+  '.hero-panel-caption strong': 'الرياض، السعودية',
+  '.stats-grid span': ['سنوات في تشغيل الشبكات', 'مناصب مهنية', 'شهادات Cisco'],
+  '#about .eyebrow': 'الملخص المهني',
+  '#about h2': 'بنية تحتية موثوقة بعقلية <i>تركز على الإنجاز.</i>',
+  '.profile-copy p': ['مدير مشاريع شبكات بيانات واتصالات يملك خبرة قوية في شبكات المؤسسات وإدارة مزودي خدمة الإنترنت والعمليات الحساسة.', 'أركز على التوافر والأمان والأداء العالي في بيئات تقنية المطارات، بدءًا من تخطيط المشاريع وتنفيذها ووصولًا إلى التسليم وإدارة الخدمات اليومية.'],
+  '.profile-tags span': ['شبكات المؤسسات', 'إدارة المشاريع', 'إدارة مزودي الإنترنت', 'الاتصالات الهاتفية عبر IP'],
+  '#experience .eyebrow': 'المسار المهني',
+  '#experience h2': 'الخبرة',
+  '.section-intro': 'قيادة الشبكات والاتصالات والعمليات في المطارات والجهات الحكومية والبنوك وخدمات التقنية.',
+  '.exp-period': ['2025 — حتى الآن', '2022 — 2025', '2020 — 2022', '2019 — 2020', '2012 — 2018'],
+  '.timeline h3': ['مدير مشاريع — الشبكات والاتصالات', 'مهندس أول شبكات ومشاريع', 'مهندس مركز عمليات الشبكة', 'مهندس شبكات', 'مستشار مبيعات'],
+  '.exp-org': ['شركة مطارات الرياض', 'شركة مطارات الرياض / MDSA', 'شركة مطارات الرياض / Wipro', 'وزارة الإعلام / Creative Systems', 'مصرف الراجحي'],
+  '.timeline li': ['قاد مشاريع الشبكات من التخطيط إلى التنفيذ والتسليم.', 'قاد عمليات إدارة الحوادث وطلبات الخدمة والتغيير والمشكلات.', 'أدار بوابات مزودي الإنترنت والموردين مع ضمان أداء الشبكة وتوافرها وأمانها.'],
+  '#credentials .eyebrow': 'الشهادات',
+  '#credentials h2': 'خبرة مبنية على <i>التخصص الشبكي.</i>',
+  '#credentials > div > div:first-child > p:not(.eyebrow)': 'شهادات Cisco الحالية التي تدعم تنفيذ شبكات المؤسسات ومشاريع الاتصالات.',
+  '.credential-list span': ['ENCOR وENARSI — 2022 ↗', '2022 ↗'],
+  '.education-section .eyebrow': 'الخلفية الأكاديمية',
+  '.education-section h2': 'التعليم',
+  '.edu-item h3': ['بكالوريوس — دعم أنظمة شبكات الحاسب', 'دبلوم — الدعم الفني'],
+  '.edu-item p': ['كلية التقنية · 2018', 'كلية التقنية · 2011'],
+  '.skills-section .eyebrow': 'القدرات الأساسية',
+  '.skills-section h2': 'المهارات والمشاريع',
+  '.skills-section .profile-tags span': ['شبكات Cisco للمؤسسات', 'إدارة المشاريع', 'إدارة الخدمات والعمليات', 'أمن الشبكات', 'الاتصالات الهاتفية عبر IP', 'استكشاف الأخطاء وإصلاحها', 'توسعة الشبكات', 'ترقية مزودي الإنترنت', 'مراكز البيانات', 'تطوير مطار الملك خالد الدولي', 'CCTV', 'PTT', 'إدارة الموردين'],
+  '#contact .eyebrow': 'لنتحدث',
+  '#contact h2': 'هل أنت مستعد لبناء <i>الاتصال القادم؟</i>',
+  '#contact > div > div:last-child > p': 'للاستفسارات حول البنية التحتية للشبكات ومشاريع الاتصالات وإدارة مزودي الإنترنت والعمليات الحساسة.',
+  '.footer-links a': ['نبذة', 'الخبرة', 'تواصل'],
+  '.footer-bottom span': ['© 2026 سعيد صالح الشهراني', 'الشبكات / الاتصالات / العمليات']
 };
 
-const originalContent = new Map();
+const original = new Map();
 const originalAttributes = new Map();
-Object.keys(translations.ar).forEach((selector) => {
+Object.entries(translations).forEach(([selector]) => {
   const elements = document.querySelectorAll(selector);
-  originalContent.set(selector, Array.from(elements, (element) => element.innerHTML));
+  original.set(selector, Array.from(elements, (element) => element.innerHTML));
   if (selector === '#site-search') originalAttributes.set(selector, elements[0]?.getAttribute('placeholder'));
 });
 
@@ -58,8 +66,8 @@ const applyLanguage = (language) => {
   const isArabic = language === 'ar';
   document.documentElement.lang = language;
   document.documentElement.dir = isArabic ? 'rtl' : 'ltr';
-  document.title = isArabic ? 'حلول الجودة | استشارات الحوكمة وPMO التقني' : 'Quality Solution | GRC & IT-PMO Advisory';
-  Object.entries(translations.ar).forEach(([selector, value]) => {
+  document.title = isArabic ? 'سعيد صالح الشهراني | مدير مشاريع الشبكات' : 'Saeed Saleh Al-Shahrani | Network Project Manager';
+  Object.entries(translations).forEach(([selector, value]) => {
     const elements = document.querySelectorAll(selector);
     const values = Array.isArray(value) ? value : [value];
     elements.forEach((element, index) => {
@@ -67,11 +75,12 @@ const applyLanguage = (language) => {
         if (selector === '#site-search') element.setAttribute('placeholder', value.placeholder);
         else element.innerHTML = values[index] ?? values[0];
       } else {
-        element.innerHTML = originalContent.get(selector)?.[index] ?? originalContent.get(selector)?.[0] ?? element.innerHTML;
+        element.innerHTML = original.get(selector)?.[index] ?? original.get(selector)?.[0] ?? element.innerHTML;
         if (selector === '#site-search') element.setAttribute('placeholder', originalAttributes.get(selector));
       }
     });
   });
+  languageLinks.forEach((link) => link.classList.toggle('active', link.dataset.language === language));
 };
 
 const toggleLanguages = (control) => {
@@ -82,26 +91,20 @@ const toggleLanguages = (control) => {
 };
 
 menuToggle.addEventListener('click', () => {
-  toggleLanguages(menuToggle);
+  navLinks.classList.toggle('open');
+  menuToggle.setAttribute('aria-expanded', String(navLinks.classList.contains('open')));
 });
-
-languageToggle.addEventListener('click', () => {
-  toggleLanguages(languageToggle);
-});
-
-languageLinks.forEach((link) => {
-  link.addEventListener('click', (event) => {
-    event.preventDefault();
-    const language = link.dataset.language;
-    applyLanguage(language);
-    languageLinks.forEach((item) => item.classList.toggle('active', item === link));
-    languageOptions.classList.remove('open');
-    menuToggle.setAttribute('aria-expanded', 'false');
-    languageToggle.setAttribute('aria-expanded', 'false');
-  });
-});
-
+languageToggle.addEventListener('click', () => toggleLanguages(languageToggle));
 searchToggle.addEventListener('click', () => {
   searchPanel.classList.toggle('open');
   if (searchPanel.classList.contains('open')) document.querySelector('#site-search').focus();
 });
+languageLinks.forEach((link) => link.addEventListener('click', (event) => {
+  event.preventDefault();
+  applyLanguage(link.dataset.language);
+  languageOptions.classList.remove('open');
+  languageToggle.setAttribute('aria-expanded', 'false');
+}));
+navLinks.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => navLinks.classList.remove('open')));
+
+if (new URLSearchParams(window.location.search).get('lang') === 'ar') applyLanguage('ar');
