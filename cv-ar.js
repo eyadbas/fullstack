@@ -28,6 +28,7 @@ const translations = {
   '#certifications .section-title': 'اعتمادات موثقة',
   '#certifications .cv-sub': 'اختر "عرض الشهادة" لفتح ملف PDF الموثق.',
   '.cert-button': 'عرض الشهادة <span>↗</span>',
+  '.cv-download-link': 'تحميل السيرة الذاتية <span>↗</span>',
   '.columns > div:first-child .section-label': 'أثر مختار',
   '.columns > div:first-child .section-title': 'المشاريع',
   '.columns > div:last-child .section-label': 'القدرات الأساسية',
